@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>{{title}}</title>
+{% endblock %}
+{% block form_head %}
+<link rel="stylesheet" href='{% static "css/home.css" %}' >
+{% endblock %}
+{% block content %}
+<div class="container home_new">
+  <div class="row">
+    <div class="col-12" style="height: 100%;position: absolute;left:0px">
+      <canvas></canvas>
+      <a href="{% url 'products:list' %}">
+      <img src="{% static 'img/cart.png' %}" alt="StatShop" style="left: 595px;top: 230px; position:absolute; width:20%">
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}2
+{% block script %}
+<script src="{% static "jss/home.js" %}"></script>
+{% endblock %}

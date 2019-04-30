@@ -1,0 +1,26 @@
+<div class="card transparent_class login-form" style="width: 18rem;">
+    <div class="card-header">
+      <h5 class="card-title">Logged In</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-muted">User Name: {{ user.username }}</li>
+      <li class="list-group-item text-muted">Name: {{ user.first_name }} {{ user.last_name }}</li>
+      <li class="list-group-item text-muted">Email: {{ user.email }}</li>
+    </ul>
+    <!-- <h5 class="card-subtitle ></h5>
+    <h5 class="card-subtitle mb-2 text-muted"></h5>
+    <h5 class="card-subtitle mb-2 text-muted"></h5> -->
+  <div class="card-body">
+    <a href="/logout" class="card-link">Log Out</a>&nbsp &nbsp &nbsp
+    <a href="/changepass" class="card-linkt">Change Password</a>
+  </div>
+  {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible text-center" role="alert"">
+    <ul class="messages">
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    </ul>
+    </div>
+  {% endfor %}
+  {% endif %}
+</div>

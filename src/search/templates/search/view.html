@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block form_head %}
+<link rel="stylesheet" href='{% static "css/card.css" %}' >
+{% endblock %}
+{% block content %}
+<div class='container-fluid mx-auto text-center' style="margin-top:10px;">
+  <div class='row'>
+    {% if request.GET.q %}
+    <div class="col-12 mb-3">
+      <h3>Searched For : {{ request.GET.q|title }}</h3>
+      <hr/>
+    </div>
+    {% else %}
+      {% include 'search/snippets/search-form.html' %}
+    {% endif %}
+    {% for obj in object_list %}
+    <div class='col-3'>
+      {% include 'products/snippets/card.html' with instance=obj %}
+      {% if forloop.counter|divisibleby:4 %}
+        </div></div><div class='row'><div class='col-12'><hr/></div>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div></div>
+
+  {% endblock %}

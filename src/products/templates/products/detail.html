@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container my-auto transparent_class">
+  <div class="row">
+    <div class="col-3 order-12">
+      <img src="{{ object.image.url }}" alt="Product Image" class="img-thumbnail">
+    </div>
+    <div class="col-8 order-1">
+          <h2>NAME : {{ object.title|upper }}</h2><br>
+          <h3>PRICE : ₹ {{ object.price }} </h3><br>
+    </div>
+  </div>
+  <div class="row">
+    <h4>{{"Desciption :-"|title}}</h4>
+  </div>
+  <div class="row">
+    <pre class="text-justify" style="font-size: 25px; white-space: pre-wrap;">{{ object.description }}</pre>
+  </div>
+</div>
+{% endblock %}

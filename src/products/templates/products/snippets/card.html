@@ -1,0 +1,16 @@
+  <div class="card transparent_class mx-auto" style="width: 18rem;">
+    {% if instance.image %}
+    <a href="{{ instance.get_absolute_url }}">
+    <img class="card-img-top" src="{{ instance.image.url }}" alt="Card image cap"></a>
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{ instance.title }}</h5>
+      <p class="card-text">{{ instance.description|truncatewords:12 }}</p>
+      <h2 class="card-title pricing-card-title">₹ {{ instance.price }}</h2>
+      <a href="{{ instance.get_absolute_url }}" class="btn btn-primary">View Product</a>
+      <!-- <a href="{% url 'products:detail' slug=instance.slug %}" class="btn btn-warning">URL Shortcut</a> -->
+      {% if instance.featured == True %}
+      <div class="ribbon"><span>Exclusive</span></div>
+      {% endif %}
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  height: 100%;
+}
+.bg {
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+overflow: scroll;
+}
+
+.transparent_class {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.5);
+}
+.transparent_nav {
+  background-color: #fff;
+  background-color: rgba(255,255,255,0.7);
+  color: #ffffff;
+}
+.alert-error{background-color:#f2dede;border-color:#ebcccc;color:#a94442}.alert-error hr{border-top-color:#e4b9b9}.alert-error
+
+.home_new{
+  background-color: rgba(0,0,0,0.5);
+}

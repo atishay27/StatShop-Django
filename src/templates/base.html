@@ -1,0 +1,21 @@
+{% load static %}
+<!doctype html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      {% block title %}
+      <title>StatShop</title>
+      {% endblock %}
+      {% include 'base/css.html' %}
+      {% block form_head %}{% endblock %}
+    </head>
+    <body class="bg" style="background-image: url({% static 'img/bgmain.png' %});">
+      <div class="sticky-top transparent_nav">{% include 'base/navbar.html' %}</div>
+      {% block content %}{% endblock %}
+      {% block script %}{% endblock %}
+      {% include 'base/js.html' %}
+    </div>
+    </body>
+  </html>

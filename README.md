@@ -5,7 +5,7 @@ StatShop is a e-commerce website build using django
 For Source Code please visit 'src' folder
 
 <b><h3>Project Images</h3></b>
-To Check website functionality and look please visit 'frontend' folder
+To Check website functionality and look please visit 'frontend' folder<br>
 Watch Video <a href="https://youtu.be/lmusAMFQkEI">Here</a><br>
 <h3>Developed By</h3>
 <ul>
